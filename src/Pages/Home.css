@@ -1,0 +1,85 @@
+/* Home Container */
+.home-container {
+    max-width: 1200px;
+    margin: 1.5rem auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+  
+  /* Search Bar Styling */
+  .search-bar {
+    margin: 1.5rem 0;
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  /* News Card Styling */
+  .news-card {
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .news-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Error Message Styling */
+  .error-message {
+    color: #dc3545;
+    font-weight: 500;
+    margin: 2rem 0;
+    text-align: center;
+    background-color: #f8d7da;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+  }
+  
+  /* Pagination Controls */
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .pagination-btn {
+    background: linear-gradient(135deg, #343a40, #495057);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+  .pagination-btn:disabled {
+    background-color: #adb5bd;
+    cursor: not-allowed;
+  }
+  
+  .pagination-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #495057, #212529);
+    transform: scale(1.03);
+  }
+  
+  /* Page Info */
+  .pagination-info {
+    font-size: 1.1rem;
+    color: #212529;
+    font-weight: 500;
+  }
+  
+ 

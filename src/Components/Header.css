@@ -1,0 +1,69 @@
+/* Header container */
+.custom-header {
+    background: linear-gradient(120deg, #bdb7b7, #3b3b3b);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Category Selector Layout */
+  .category-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 1100px;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+  }
+  
+  /* Category Buttons */
+  .category-selector .btn {
+    flex: 1 1 140px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #f1f1f1;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.9rem 1.2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    text-transform: capitalize;
+  }
+  
+  .category-selector .btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: scale(1.03) translateY(-2px);
+    color: #ffffff;
+  }
+  
+  /* Active category button */
+  .category-selector .btn.active {
+    background: linear-gradient(135deg, #ffcb05, #ffe873);
+    color: #212529;
+    font-weight: bold;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(255, 203, 5, 0.35);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .category-selector {
+      flex-direction: row;
+      align-items: center;
+    }
+  
+    .category-selector .btn {
+      width: 90%;
+      font-size: 0.95rem;
+    }
+  }
+  
