@@ -19,7 +19,7 @@ const Home = ({ category }) => {
   const [error, setError] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null); // For modal
   const pageSize = 4;
-  // const API_KEY = "eef646140e634d4a8754c5c7115ad0f5";
+
 
   const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
  console.log(API_KEY)
