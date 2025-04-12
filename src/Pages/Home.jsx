@@ -1,6 +1,4 @@
-
-
-// // src/pages/Home.jsx
+// src/pages/Home.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import NewsCard from '../components/NewsCard';
@@ -20,18 +18,21 @@ const Home = ({ category }) => {
   const [selectedArticle, setSelectedArticle] = useState(null); // For modal
   const pageSize = 4;
 
-
   const API_KEY = import.meta.env.VITE_NEWS_API_KEY;
- console.log(API_KEY)
+  console.log(API_KEY); // Ensure the API key is being correctly loaded from the env file.
 
-  
   useEffect(() => {
     const fetchNews = async () => {
       setLoading(true);
       setError(null);
       try {
         const res = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=us&category=${category}&q=${searchQuery}&page=${currentPage}&pageSize=${pageSize}&apiKey=${API_KEY}`
+          `https://newsapi.org/v2/top-headlines?country=us&category=${category}&q=${searchQuery}&page=${currentPage}&pageSize=${pageSize}`,
+          {
+            headers: {
+              'X-Api-Key': API_KEY, // Pass the API key in the header
+            },
+          }
         );
         setArticles(res.data.articles);
         setTotalResults(res.data.totalResults);
@@ -106,4 +107,3 @@ const Home = ({ category }) => {
 };
 
 export default Home;
-
